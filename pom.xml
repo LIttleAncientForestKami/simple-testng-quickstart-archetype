@@ -5,7 +5,7 @@
   <artifactId>simple-testng-quickstart</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>Archetype - simple-testng-quickstart - contains clean POM, TestNG with version set and prototype sources</name>
-  <url>http://github.com/LIttleAncientForestKami/simple-testng-quickstart/maven.html</url>
+  <url>https://github.com/LIttleAncientForestKami/simple-testng-quickstart-archetype.git</url>
   <description>Simple (one class one test) TestNG project with clean POM (UTF-8, JDK8, etc. set)</description>
   <inceptionYear>2016</inceptionYear>
 
