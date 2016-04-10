@@ -1,4 +1,4 @@
-package $lafk.pl;
+package ${packaging};
 
 /**
  * Hello world!

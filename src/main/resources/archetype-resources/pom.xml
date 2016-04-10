@@ -40,20 +40,6 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>${surefireVer}</version>
 <!-- TestNG configuration here. Examples: https://maven.apache.org/surefire/maven-surefire-plugin/examples/testng.html -->
-            <configuration>
-                <suiteXMLFiles>
-                    <suiteXmlFile>testng.xml</suiteXmlFile>
-                    <!-- if you use more than one suites, add more lines here -->
-                </suiteXMLFiles>
-<!-- 
-    If you use groups, choose:
-    1) to have them permanently run, uncomment next line (changing groups to yours)
-    2) or use -Dgroups=mygroup,myOtherGroup as property for mvn test, to run them only once
- -->
-<!--              
-                <groups>functest,perftest</groups> 
--->
-            </configuration>
           </plugin>
 
           <plugin>
