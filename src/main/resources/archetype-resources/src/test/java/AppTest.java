@@ -1,4 +1,4 @@
-package ${packaging};
+package ${groupId};
 
 
 import org.testng.Assert;

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>lafk.pl</groupId>
   <artifactId>simple-testng-quickstart</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>Archetype - simple-testng-quickstart - contains clean POM, TestNG with version set and prototype sources</name>
   <url>https://github.com/LIttleAncientForestKami/simple-testng-quickstart-archetype.git</url>
   <description>Simple (one class one test) TestNG project with clean POM (UTF-8, JDK8, etc. set)</description>
