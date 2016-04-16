@@ -1,6 +1,6 @@
-= Simple TestNG Archetype project page
-:author: Tomasz Borek, 
-:email: http://twitter.com/LAFK_pl(@LAFK_pl)
+= Simple TestNG Archetype 
+:author: Tomasz Borek, @LAFK_pl
+:email: http://twitter.com/LAFK_pl[@LAFK_pl]
 :toc: preamble
 :toc-title: Agenda
 :hardbreaks:
@@ -12,8 +12,9 @@
 :revealjs_theme: white
 :revealjs_slideNumber: true
 
-Project page for Maven archetype, explaining it's contents and usages.
-Done using AsciiDoctor and Reveal.js, so navigate with arrow keys.
+project page explaining archetype's contents and usages.
+
+TIP: Done using AsciiDoctor and Reveal.js, so navigate with arrow keys.
 
 [data-background="green"]
 == Abbreviated version
@@ -37,9 +38,13 @@ Sub:
  
 [source, bash]
 ----
-mvn archetype:generate -DarchetypeGroupId=lafk.pl -DarchetypeArtifactId=simple-testng-quickstart -DarchetypeVersion=1.0 -DgroupId=eu.lafk -DartifactId=sample-ap
+mvn archetype:generate -DarchetypeGroupId=lafk.pl \
+-DarchetypeArtifactId=simple-testng-quickstart \
+-DarchetypeVersion=1.0 \
+-DgroupId=eu.lafk -DartifactId=sample-ap
 ----
 
+=== Useful commands
 . `mvn versions:display-property-updates` to see if you need to update TestNG
 . `` - to get rid of example test sources if you only need clear POM with dependencies and want to write your own simple app.
 
