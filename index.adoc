@@ -1,0 +1,51 @@
+= Simple TestNG Archetype project page
+:author: Tomasz Borek, 
+:email: http://twitter.com/LAFK_pl(@LAFK_pl)
+:toc: preamble
+:toc-title: Agenda
+:hardbreaks:
+:icons: font
+:imagesdir: ./img/
+:docinfo:
+:source-highlighter: highlightjs
+:backend: revealjs
+:revealjs_theme: white
+:revealjs_slideNumber: true
+
+Project page for Maven archetype, explaining it's contents and usages.
+Done using AsciiDoctor and Reveal.js, so navigate with arrow keys.
+
+[data-background="green"]
+== Abbreviated version
+
+Few slides to have it all (no explanations)
+
+. Generating app from archetype
+. Version check
+. What it offers: tiny TestNG primer
+. Clean-up if you already know TestNG and want to just code  
+
+For those who want to understand: move right (arrow key).
+
+=== Generating app
+Sub:
+ 
+. archetypeVersion at some point (1.0 is current as of April 2016)
+. groupId from `eu.lafk` to yours
+. artifactId from `sample-app` to yours
+. it should ask you for packaging during generation, that's Java `package`.
+ 
+[source, bash]
+----
+mvn archetype:generate -DarchetypeGroupId=lafk.pl -DarchetypeArtifactId=simple-testng-quickstart -DarchetypeVersion=1.0 -DgroupId=eu.lafk -DartifactId=sample-ap
+----
+
+. `mvn versions:display-property-updates` to see if you need to update TestNG
+. `` - to get rid of example test sources if you only need clear POM with dependencies and want to write your own simple app.
+
+[data-background="green"]
+== Longer version
+
+This version covers same material, but offers explanations and links for further reading.
+
+WARNING: TBA
