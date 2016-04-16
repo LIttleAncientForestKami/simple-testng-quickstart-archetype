@@ -1,3 +1,5 @@
+# needed only for gh-pages, not on master
+reveal.js
 
 # Created by https://www.gitignore.io/api/java,maven,vim
 
