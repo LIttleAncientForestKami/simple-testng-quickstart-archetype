@@ -16,6 +16,10 @@ project page explaining archetype's contents and usages.
 
 TIP: Done using AsciiDoctor and Reveal.js, so navigate with arrow keys.
 
+== One picture is worth thousand words
+
+image::Generate.gif[animated gif showing what's inside]
+
 [data-background="green"]
 == Abbreviated version
 
@@ -29,24 +33,25 @@ Few slides to have it all (no explanations)
 For those who want to understand: move right (arrow key).
 
 === Generating app
-Sub:
- 
-. archetypeVersion at some point (1.0 is current as of April 2016)
-. groupId from `eu.lafk` to yours
-. artifactId from `sample-app` to yours
-. it should ask you for packaging during generation, that's Java `package`.
- 
 [source, bash]
 ----
 mvn archetype:generate -DarchetypeGroupId=lafk.pl \
 -DarchetypeArtifactId=simple-testng-quickstart \
 -DarchetypeVersion=1.0 \
--DgroupId=eu.lafk -DartifactId=sample-ap
+-DgroupId=eu.lafk -DartifactId=sample-app
 ----
+
+Substitute:
+
+. archetypeVersion - 1.0 is current as of April 2016
+. groupId from `eu.lafk` to yours
+. artifactId from `sample-app` to yours
+. it should ask you for packaging during generation, that's Java `package`.
+ 
 
 === Useful commands
 . `mvn versions:display-property-updates` to see if you need to update TestNG
-. `` - to get rid of example test sources if you only need clear POM with dependencies and want to write your own simple app.
+. `find src/test/ -name \*.java -exec rm {} \;` - to get rid of example test sources if you only need clear POM with dependencies and want to write your own simple app.
 
 [data-background="green"]
 == Longer version
