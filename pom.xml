@@ -20,6 +20,17 @@
     <url>https://github.com/LIttleAncientForestKami/simple-testng-quickstart-archetype.git</url>
   </scm>
 
+  <properties>
+    <encoding>UTF-8</encoding>
+<!-- https://maven.apache.org/general.html#encoding-warning -->
+    <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+<!-- https://maven.apache.org/general.html#special-characters-site -->
+    <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+<!-- see source for the plugins to verify if those can be skipped, they should IIRC -->
+    <maven.compiler.encoding>${encoding}</maven.compiler.encoding>
+    <maven.resources.encoding>${encoding}</maven.resources.encoding>
+  </properties>
+
 <!-- Following: http://central.sonatype.org/pages/apache-maven.html#distribution-management-and-authentication -->
   <distributionManagement>
     <snapshotRepository>
