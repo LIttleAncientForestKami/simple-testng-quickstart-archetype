@@ -29,3 +29,7 @@ As of 10th April 2016:
 ----
 
 All are for Selenium or just WebDriver, with one (ETS) exception.
+
+![as of 2018](/img/ArchetypesAsOfDecember2018.png)
+
+![as of 2020](/img/ArchetypesAsOfDecember2020.png)

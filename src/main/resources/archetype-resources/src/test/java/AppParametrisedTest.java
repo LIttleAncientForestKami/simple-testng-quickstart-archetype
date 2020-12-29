@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 /**
  * Data providers are very useful for parametrised tests.
- * We annotate now test methods to indicate where the params come from.
+ * We annotate test methods to indicate where the parameter sets come from.
  *
  * @author LAFK_pl, Tomasz.Borek@gmail.com
  */

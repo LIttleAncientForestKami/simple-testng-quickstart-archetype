@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>pl.lafk</groupId>
   <artifactId>simple-testng-quickstart</artifactId>
-  <version>1.2</version>
+  <version>1.3</version>
   <packaging>maven-archetype</packaging>
 
   <name>Archetype - simple-testng-quickstart - contains clean POM, TestNG with version set and prototype sources</name>
@@ -29,6 +29,14 @@
 <!-- see source for the plugins to verify if those can be skipped, they should IIRC -->
     <maven.compiler.encoding>${encoding}</maven.compiler.encoding>
     <maven.resources.encoding>${encoding}</maven.resources.encoding>
+<!-- plugin versions -->
+    <verEnforcer>3.0.0-M2</verEnforcer>
+    <verArchetype>3.0.1</verArchetype>
+    <verNexusStaging>1.6.8</verNexusStaging>
+    <!-- coincidence that it's the same as archetype? -->
+    <verSources>3.0.1</verSources>
+    <verJavadocs>3.0.1.</verJavadocs>
+    <verGPG>1.6</verGPG>
   </properties>
 
 <!-- Following: http://central.sonatype.org/pages/apache-maven.html#distribution-management-and-authentication -->
@@ -44,46 +52,46 @@
       <extension>
         <groupId>org.apache.maven.archetype</groupId>
         <artifactId>archetype-packaging</artifactId>
-        <version>3.0.1</version>
+        <version>${verArchetype}</version>
       </extension>
     </extensions>
 
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.0.0-M2</version>
-          <executions>
-            <execution>
-              <id>enforce-maven</id>
-              <goals>
-                <goal>enforce</goal>
-              </goals>
-              <configuration>
-                <rules>
-                  <requireMavenVersion>
-                  <!-- helps with plugin versions, so you are more up-to-date -->
-                    <version>3.5.0</version>
-                  </requireMavenVersion>
-                </rules>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>${verEnforcer}</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                <!-- helps with plugin versions, so you are more up-to-date -->
+                  <version>3.5.0</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-archetype-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>${verArchetype}</version>
         </plugin>
 
 <!-- Following https://maven.apache.org/archetype/archetype-packaging/index.html -->
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
           <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>1.6.8</version>
+          <version>${verNexusStaging}</version>
           <extensions>true</extensions>
           <configuration>
             <serverId>ossrh</serverId>
@@ -94,7 +102,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>${verSources}</version>
           <executions>
             <execution>
               <id>attach-sources</id>
@@ -107,7 +115,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.0.1</version>
+          <version>${verJavadocs}</version>
           <executions>
             <execution>
               <id>attach-javadocs</id>
@@ -122,7 +130,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-gpg-plugin</artifactId>
-          <version>1.6</version>
+          <version>${verGPG}</version>
           <executions>
             <execution>
               <id>sign-artifacts</id>
